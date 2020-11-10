@@ -24,6 +24,8 @@ steps:
   inputs:
     command: 'publish'
     publishWebProjects: true
+    arguments: '-o $(Build.ArtifactStagingDirectory)'
+
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
