@@ -15,10 +15,11 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
+- script: "whereami"
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
-    projects: './Source/'
+    projects: './Source'
 
 - task: DotNetCoreCLI@2
   inputs:
