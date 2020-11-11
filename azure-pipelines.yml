@@ -15,14 +15,9 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- task: Npm@1
-  inputs:
-    command: 'install'
-    workingDir: '**/SmartHotel360.Website'
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
-    projects: '**/SmartHotel360.Website.csproj'
 
 - task: DotNetCoreCLI@2
   inputs:
